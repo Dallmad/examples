@@ -14,7 +14,7 @@ function App() {
     );
 }
 
-export function Star() {
+function Star() {
     return (
         <div>star</div>
     )
