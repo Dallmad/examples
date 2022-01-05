@@ -69,12 +69,13 @@ export function Rating(props: RatingPropsType) {
             <Star selected={false}/>
             <Star selected={false}/>
         </div>
-    );
-
+    )
 }
+
 type StarPropsType= {
     selected: boolean
 }
+
 function Star(props: StarPropsType) {
     if (props.selected) {
         return <span><b>star </b></span>
