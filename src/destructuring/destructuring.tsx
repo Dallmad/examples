@@ -2,6 +2,7 @@ import {useState} from "react";
 
 type LessonsType = {
     title:string
+    name?:string
 }
 type StreetType = {
     title:string
