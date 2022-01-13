@@ -13,7 +13,7 @@ function App() {
             <Accordion titleValue={'Menu'} collapsed={true}/>
             <Accordion titleValue={'Users'} collapsed={false}/>
             Article 2
-            <Rating value={5}/>
+            <Rating value={4}/>
         </div>
     );
 }

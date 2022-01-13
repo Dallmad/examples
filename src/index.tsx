@@ -10,7 +10,6 @@ import {User} from "./06/06-callback";
 ReactDOM.render(
   <React.StrictMode>
     <App />
-      <User />
   </React.StrictMode>,
   document.getElementById('root')
 );
