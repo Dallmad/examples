@@ -1,13 +1,16 @@
 import React from 'react';
 import './App.css';
-import {Accordion} from "./components/Accordion/Accordion";
+import {UncontrolledAccordion} from "./components/Accordion/UnconrtolledAccordion";
 import {Rating} from "./components/Rating/Rating";
 import {OnOff} from "./components/OnOff/OnOff";
 
 function App() {
     return (
         <div>
-            <OnOff on={false}/>
+            <OnOff />
+            <OnOff />
+            <UncontrolledAccordion titleValue={'Menu'} collapsed={true}/>
+            <UncontrolledAccordion titleValue={'Users'} collapsed={false}/>
             {/*<PageTitle title={'This is APP component'}/>
             <PageTitle title={'My friend'}/>
             Article 1
