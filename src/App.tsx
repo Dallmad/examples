@@ -7,8 +7,8 @@ import {OnOff} from "./components/OnOff/OnOff";
 function App() {
     return (
         <div>
-            <OnOff />
-            <OnOff />
+            <OnOff on={false}/>
+            <OnOff on={false}/>
             <UncontrolledAccordion titleValue={'Menu'} collapsed={true}/>
             <UncontrolledAccordion titleValue={'Users'} collapsed={false}/>
             {/*<PageTitle title={'This is APP component'}/>
