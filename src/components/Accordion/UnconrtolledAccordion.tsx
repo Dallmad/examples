@@ -2,14 +2,16 @@ import React, {useState} from "react";
 
 type AccordionPropsType = {
     titleValue: string
-    collapsed: boolean
+    collapsed?: boolean
 }
 
 export function UncontrolledAccordion(props: AccordionPropsType) {
 
     let [collapsed,setCollapsed] = useState(false)
-    return <div onClick={()=>{setCollapsed(true)}}>
+    return <div onClick={()=>{setCollapsed(!collapsed)}}>
         <AccordionTitle title={props.titleValue}/>
+{/*added button for controled collapse Menu*/}
+        <button>TOGGLE</button>
         { !collapsed && <AccordionBody/> }
     </div>
 }
