@@ -9,17 +9,23 @@ import {Accordion} from "./components/Accordion/Accordion";
 
 function App() {
     let [ratingValue, setRatingValue] = useState<RatingValueType>(0)
-    let [accordionCollapsed,setAccordionCollapsed] = useState<boolean>(false)
+    let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
     return (
         <div className={'App'}>
             {/*<OnOff on={false}/>*/}
             {/*added uncontrolled buttons Accordion and Rating*/}
             {/*<UncontrolledAccordion titleValue={'Menu'}/>*/}
-{/*
-            <Accordion titleValue={'Menu'} collapsed={setAccordionCollapsed}/>
-*/}
-            <Rating value={ratingValue} onClick={setRatingValue}/>
-            <UncontrolledRating/>
+
+            <Accordion
+                titleValue={'Menu'}
+                collapsed={accordionCollapsed}
+                onChange={() => {
+                    setAccordionCollapsed(!accordionCollapsed)
+                }}/>
+
+            <Rating
+                value={ratingValue}
+                onClick={setRatingValue}/>
         </div>
     );
 }
