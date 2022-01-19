@@ -10,7 +10,6 @@ export function UncontrolledAccordion(props: AccordionPropsType) {
     let [collapsed,setCollapsed] = useState(false)
     return <div>
         <AccordionTitle title={props.titleValue} onClick={()=>{setCollapsed(!collapsed)}}/>
-{/*added button for controled collapse Menu*/}
         { !collapsed && <AccordionBody/> }
     </div>
 }

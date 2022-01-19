@@ -5,6 +5,7 @@ import {OnOff} from "./components/OnOff/OnOff";
 import {UncontrolledRating} from "./components/Rating/UncontrolledRating";
 import {Rating, RatingValueType} from "./components/Rating/Rating";
 import {Accordion} from "./components/Accordion/Accordion";
+import {UncontrolledOnOff} from "./components/OnOff/UncontrolledOnOff";
 
 
 function App() {
@@ -13,12 +14,12 @@ function App() {
     let [switchOn, setSwitchOn] = useState(false);
     return (
         <div className={'App'}>
-            <OnOff on={switchOn} onChange={setSwitchOn}/>
+           {/* <OnOff on={switchOn} onChange={setSwitchOn}/>*/}
             {/*<OnOff
                 on={switchOn}
                 onChange={(on) => {
                     setSwitchOn(on)
-                }}/>*/}
+                }}/>//identical//*/}
 
             <Accordion
                 titleValue={'Menu'}
@@ -30,6 +31,7 @@ function App() {
             <Rating
                 value={ratingValue}
                 onClick={setRatingValue}/>
+            <UncontrolledOnOff onChange={setSwitchOn}/>{switchOn.toString()}
         </div>
     );
 }
