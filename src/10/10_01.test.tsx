@@ -1,5 +1,5 @@
 import {
-    addCompanie, addCompany,
+    addCompany,
     addNewBooksToUser,
     makeHairstyle,
     moveUser,
