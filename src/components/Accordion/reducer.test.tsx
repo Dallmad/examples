@@ -8,7 +8,7 @@ test('render should change value to opposite value', () => {
     const newState = reducer(state, {type: TOGGLE_CONSTANT})
     expect(newState.collapsed).toBe(true)
 })
-test('collapsed should be false', () => {
+test('reducer should throw error because action type is incorrect', () => {
     const state: StateType = {
         collapsed: false
     }
