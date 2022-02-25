@@ -7,7 +7,7 @@ type AccordionPropsType = {
 }
 
 export function UncontrolledAccordion(props: AccordionPropsType) {
-    let [collapsed, dispatch] = useReducer(reducer, false)
+    let [state, dispatch] = useReducer(reducer, {collapsed: false})
 
     return <div>
         <AccordionTitle
@@ -15,7 +15,7 @@ export function UncontrolledAccordion(props: AccordionPropsType) {
             onClick={() => {
                 dispatch({type: TOGGLE_CONSTANT})
             }}/>
-        {!collapsed && <AccordionBody/>}
+        {!state.collapsed && <AccordionBody/>}
     </div>
 
 
