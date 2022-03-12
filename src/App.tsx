@@ -14,7 +14,7 @@ function App() {
     let [switchOn, setSwitchOn] = useState(false);
     return (
         <div className={'App'}>
-           {/* <OnOff on={switchOn} onChange={setSwitchOn}/>*/}
+            {/* <OnOff on={switchOn} onChange={setSwitchOn}/>*/}
             {/*<OnOff
                 on={switchOn}
                 onChange={(on) => {
@@ -26,7 +26,8 @@ function App() {
                 collapsed={accordionCollapsed}
                 onChange={() => {
                     setAccordionCollapsed(!accordionCollapsed)
-                }}/>
+                }}
+            />
 
             <Rating
                 value={ratingValue}
