@@ -7,8 +7,8 @@ export default {
 export const SimpleExample = () => {
 
 
-    const [fake,setFake] = useState(1)
-    const [counter,setCounter] = useState(1)
+    const [fake, setFake] = useState(1)
+    const [counter, setCounter] = useState(1)
     console.log('SimpleExample')
 
     useEffect(() => {
@@ -18,15 +18,35 @@ export const SimpleExample = () => {
     useEffect(() => {
         console.log('useEffect only first render')
         document.title = counter.toString()
-    },[])
+    }, [])
     useEffect(() => {
         console.log('useEffect first render and every counter change')
         document.title = counter.toString()
-    },[counter])
+    }, [counter])
 
     return <>
         Hi count:{counter} and fake:{fake}
-        <button onClick={()=>setCounter( state => state+1)}>+</button>
-        <button onClick={()=>setFake( fake => fake+1)}>+</button>
+        <button onClick={() => setCounter(state => state + 1)}>+</button>
+        <button onClick={() => setFake(fake => fake + 1)}>+</button>
+    </>
+}
+
+
+export const SetTimeoutExample = () => {
+
+    const [fake, setFake] = useState(1)
+    const [counter, setCounter] = useState(1)
+    console.log('SetTimeoutExample')
+
+    useEffect(() => {
+        setInterval(() => {
+            setCounter(state => state+1)
+        }, 1000)
+    }, [])
+
+    return <>
+        Hi count:{counter} and fake:{fake}
+        {/*<button onClick={()=>setCounter( state => state+1)}>+</button>
+        <button onClick={()=>setFake( fake => fake+1)}>+</button>*/}
     </>
 }
